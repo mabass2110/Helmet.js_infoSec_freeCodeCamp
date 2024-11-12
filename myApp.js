@@ -34,7 +34,10 @@ helmet.hsts({
 }),
 
 //Checks if DNS prefetch is enable or disabled
-helmet.dnsPrefetchControl()
+helmet.dnsPrefetchControl(),
+
+//Disables caching for allow users to use the latest website version, in case of it gets some updates.
+helmet.noCache()
 
 
 )
