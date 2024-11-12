@@ -21,7 +21,17 @@ helmet.frameguard({
 helmet.xssFilter(),
 
 //It prevents the browser to alter the Content-Type Header
-helmet.noSniff()
+helmet.noSniff(),
+
+
+// which prevents the browser from opening files of untrusted types
+helmet.ieNoOpen(),
+
+//Protect websites against protocol downgrade attacks and cookie hijacking
+helmet.hsts({
+  maxAge: 90*24*60*60,
+  force: true
+})
 
 
 
