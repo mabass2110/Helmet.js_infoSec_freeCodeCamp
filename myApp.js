@@ -18,7 +18,10 @@ helmet.frameguard({
   }),
 
 //Sanitizes input sent to the server
-helmet.xssFilter()
+helmet.xssFilter(),
+
+//It prevents the browser to alter the Content-Type Header
+helmet.noSniff()
 
 
 
