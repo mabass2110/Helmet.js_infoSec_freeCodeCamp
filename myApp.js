@@ -31,8 +31,10 @@ helmet.ieNoOpen(),
 helmet.hsts({
   maxAge: 90*24*60*60,
   force: true
-})
+}),
 
+//Checks if DNS prefetch is enable or disabled
+helmet.dnsPrefetchControl()
 
 
 )
