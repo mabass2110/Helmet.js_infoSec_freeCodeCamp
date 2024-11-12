@@ -9,6 +9,15 @@ app.use(
   // Hide the "X-Powered-By" header to prevent disclosing the server technology (e.g., Express)
   helmet.hidePoweredBy(),
 
+//Sets the frame policy to prevent the site’s content from being displayed within an iframe on any site.
+  
+helmet.frameguard({
+
+  // The 'deny' option blocks iframe use on all sites
+    action: 'deny'
+  }),
+
+
 )
 
 
