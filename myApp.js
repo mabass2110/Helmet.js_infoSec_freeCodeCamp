@@ -2,17 +2,14 @@ const express = require('express');
 const app = express();
 const helmet = require("helmet");
 
-app.use(helmet.hidePoweredBy())
 
+// Apply various security middleware functions using helmet
+app.use(
 
+  // Hide the "X-Powered-By" header to prevent disclosing the server technology (e.g., Express)
+  helmet.hidePoweredBy(),
 
-
-
-
-
-
-
-
+)
 
 
 
