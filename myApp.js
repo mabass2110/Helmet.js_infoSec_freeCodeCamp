@@ -17,6 +17,10 @@ helmet.frameguard({
     action: 'deny'
   }),
 
+//Sanitizes input sent to the server
+helmet.xssFilter()
+
+
 
 )
 
