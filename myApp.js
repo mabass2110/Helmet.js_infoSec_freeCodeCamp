@@ -37,7 +37,19 @@ helmet.hsts({
 helmet.dnsPrefetchControl(),
 
 //Disables caching for allow users to use the latest website version, in case of it gets some updates.
-helmet.noCache()
+helmet.noCache(),
+
+
+//defines default src for the resources
+//defines script src's allowed
+helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'", 'trusted-cdn.com']
+  }, 
+}
+  
+)
 
 
 )
